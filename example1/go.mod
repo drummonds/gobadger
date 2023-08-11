@@ -1,4 +1,4 @@
-module github.com/emmaly/badger2040/one
+module github.com/drummonds/gobadger/example1
 
 go 1.19
 

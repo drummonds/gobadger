@@ -33,8 +33,8 @@ const (
 
 	// Text at the bottom of the screen
 	// leave both/either line blank if unwanted
-	LINE1 = "Emmaly"
-	LINE2 = "just goph'ing around"
+	LINE1 = "H3's badge"
+	LINE2 = "Tinkering"
 )
 
 // Shapes to include (comment out a shape to disable it)
