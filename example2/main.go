@@ -33,8 +33,14 @@ const (
 
 	// Text at the bottom of the screen
 	// leave both/either line blank if unwanted
-	LINE1 = "H3's badge"
-	LINE2 = "Tinkering again 2023-10-23"
+	LINEA1 = "H3's badge"
+	LINEA2 = "Tinkering again 2023-10-23"
+
+	LINEB1 = "I love you"
+	LINEB2 = "Still tinkering"
+
+	LINEC1 = "Humphrey Drummond"
+	LINEC2 = "Atom Senior Backend Engineer"
 )
 
 // Shapes to include (comment out a shape to disable it)
@@ -56,7 +62,7 @@ var (
 )
 
 func main() {
-	rand.Seed(time.Now().UnixNano())
+	// rand.Seed(time.Now().UnixNano())
 
 	led = machine.LED
 	led.Configure(
@@ -155,15 +161,15 @@ func main() {
 			shape.Plot(&display)
 		}
 
-		if LINE1 != "" {
+		if LINEA1 != "" {
 			y := displayHeight - 34
-			if LINE2 == "" {
+			if LINEA2 == "" {
 				y += 20
 			}
-			tinyfont.WriteLineRotated(&display, &freemono.Bold24pt7b, 8, y, LINE1, BLACK, tinyfont.NO_ROTATION)
+			tinyfont.WriteLineRotated(&display, &freemono.Bold24pt7b, 8, y, LINEA1, BLACK, tinyfont.NO_ROTATION)
 		}
-		if LINE2 != "" {
-			tinyfont.WriteLineRotated(&display, &freemono.Bold9pt7b, 10, displayHeight-10, LINE2, BLACK, tinyfont.NO_ROTATION)
+		if LINEA2 != "" {
+			tinyfont.WriteLineRotated(&display, &freemono.Bold9pt7b, 10, displayHeight-10, LINEA2, BLACK, tinyfont.NO_ROTATION)
 		}
 
 		display.Display()
